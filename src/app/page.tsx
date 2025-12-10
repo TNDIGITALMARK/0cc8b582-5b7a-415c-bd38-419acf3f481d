@@ -126,10 +126,10 @@ export default function HomePage() {
       <section className="section bg-primary text-primary-foreground">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
               Ready to Showcase Your Brand?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8 text-center max-w-2xl mx-auto">
               Let's create something amazing together. Submit your brand today and start your journey to exceptional social media presence.
             </p>
             <Link href="/submit" className="btn-primary inline-flex items-center gap-2 text-lg px-8 py-4">
