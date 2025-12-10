@@ -245,6 +245,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   letter-spacing: -0.03em;
   color: hsl(var(--foreground));
+  text-align: inherit; /* Ensures headings inherit text-align from parent */
 }
 
 h1 {
@@ -291,6 +292,7 @@ p {
   margin: 0 0 1.25rem;
   line-height: 1.7;
   font-size: 1rem;
+  text-align: inherit; /* Ensures paragraphs inherit text-align from parent */
 }
 
 p:last-child {
