@@ -248,6 +248,16 @@ h1, h2, h3, h4, h5, h6 {
   text-align: inherit; /* Ensures headings inherit text-align from parent */
 }
 
+/* Ensure headings in centered containers are properly centered */
+.text-center h1,
+.text-center h2,
+.text-center h3,
+.text-center h4,
+.text-center h5,
+.text-center h6 {
+  text-align: center;
+}
+
 h1 {
   font-size: clamp(2.5rem, 5vw, 4rem); /* 40px - 64px responsive */
   font-weight: 800;
@@ -297,6 +307,11 @@ p {
 
 p:last-child {
   margin-bottom: 0;
+}
+
+/* Fix for centered paragraphs with mx-auto - ensure text is also centered */
+.text-center p {
+  text-align: center;
 }
 
 /* Links with sophisticated styling */
