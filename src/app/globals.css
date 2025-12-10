@@ -310,48 +310,54 @@ p:last-child {
 }
 
 /* ============================================
-   CRITICAL FIX: Force Center Alignment for Subtitles
-   Ensures all constrained-width text elements are centered
+   CRITICAL FIX: Comprehensive Text Centering System
+   Ensures all subtitles and constrained-width elements are properly centered
    ============================================ */
 
-/* Fix for centered paragraphs with mx-auto - ensure text is also centered */
-.text-center p {
+/* Core centering rule: All children of text-center containers inherit centering */
+.text-center,
+.text-center * {
   text-align: center !important;
 }
 
-/* CRITICAL: Ensure ALL constrained-width paragraphs with mx-auto have centered text */
+/* Specific targeting for paragraphs with mx-auto (most common subtitle pattern) */
 p.mx-auto,
+p[class*="mx-auto"] {
+  text-align: center !important;
+}
+
+/* Target paragraphs with max-width constraints */
 p[class*="max-w-"] {
   text-align: center !important;
 }
 
-/* Apply to headings as well for consistency */
+/* Headings with centering patterns */
 h1.mx-auto, h2.mx-auto, h3.mx-auto, h4.mx-auto, h5.mx-auto, h6.mx-auto,
-h1[class*="max-w-"], h2[class*="max-w-"], h3[class*="max-w-"],
-h4[class*="max-w-"], h5[class*="max-w-"], h6[class*="max-w-"] {
+h1[class*="mx-auto"], h2[class*="mx-auto"], h3[class*="mx-auto"],
+h4[class*="mx-auto"], h5[class*="mx-auto"], h6[class*="mx-auto"] {
   text-align: center !important;
 }
 
-/* Force centering for any element with both max-w and mx-auto classes */
-[class*="max-w-"][class*="mx-auto"] {
-  text-align: center !important;
-}
-
-/* Ensure text-balance doesn't interfere with centering */
-.text-balance {
-  text-align: center !important;
-}
-
-/* Override any Tailwind text-left that might be applied */
+/* Ensure muted text (common for subtitles) is centered when constrained */
 .text-muted-foreground.mx-auto,
+.text-muted-foreground[class*="mx-auto"],
 .text-muted-foreground[class*="max-w-"] {
   text-align: center !important;
 }
 
-/* Additional safeguard: Force center any subtitle-like elements */
-p.text-xl[class*="mx-auto"],
-p.text-lg[class*="mx-auto"],
-p.text-2xl[class*="mx-auto"] {
+/* Target all text sizes commonly used for subtitles */
+.text-xl.mx-auto,
+.text-xl[class*="mx-auto"],
+.text-lg.mx-auto,
+.text-lg[class*="mx-auto"],
+.text-2xl.mx-auto,
+.text-2xl[class*="mx-auto"] {
+  text-align: center !important;
+}
+
+/* Ensure gray text colors (often used for subtitles) are centered */
+[class*="text-gray-"].mx-auto,
+[class*="text-gray-"][class*="mx-auto"] {
   text-align: center !important;
 }
 
@@ -631,70 +637,21 @@ button:focus-visible {
 }
 
 /* ============================================
-   ULTIMATE CENTERING FIX - High Specificity Overrides
-   Ensures absolutely NO subtitle is left-aligned
+   ADDITIONAL CENTERING SAFEGUARDS
+   Extra specificity for edge cases
    ============================================ */
 
-/* Force center ALL divs with text-center class and their children */
-div.text-center > * {
-  text-align: center !important;
-}
-
-/* Force center section containers with centered content */
-section .text-center,
-section .text-center > *,
-section .container .text-center,
-section .container .text-center > * {
-  text-align: center !important;
-}
-
-/* Specific targeting for common subtitle patterns */
-.text-center h1,
-.text-center h2,
-.text-center h3,
-.text-center h4,
-.text-center h5,
-.text-center h6,
-.text-center p,
-.text-center div {
-  text-align: center !important;
-}
-
-/* Ensure hero and section subtitles are always centered */
+/* Section-specific subtitle targeting */
 section p[class*="text-xl"],
 section p[class*="text-lg"],
-section p[class*="text-2xl"],
-.container p[class*="text-xl"],
-.container p[class*="text-lg"],
-.container p[class*="text-2xl"] {
+section p[class*="text-2xl"] {
   text-align: center !important;
 }
 
-/* Bulletproof: Any constrained width element should be centered */
-[class*="max-w-"][class*="mx-auto"],
-[class*="max-w-"].mx-auto,
-.mx-auto[class*="max-w-"] {
-  text-align: center !important;
-}
-
-/* Additional safeguard for muted foreground text */
-p.text-muted-foreground[class*="max-w-"],
-.text-muted-foreground.mx-auto,
-.text-muted-foreground[class*="text-"] {
-  text-align: center !important;
-}
-
-/* Override Tailwind prose defaults for centered content */
-.prose.text-center,
-.prose .text-center,
-.text-center .prose {
-  text-align: center !important;
-}
-
-/* Ensure gray text paragraphs (often subtitles) are centered when constrained */
-p[class*="text-gray-"][class*="mx-auto"],
-p.text-gray-300.mx-auto,
-p.text-gray-400.mx-auto {
+/* Container-specific subtitle targeting */
+.container p[class*="text-xl"].mx-auto,
+.container p[class*="text-lg"].mx-auto,
+.container p[class*="text-2xl"].mx-auto {
   text-align: center !important;
 }
 

@@ -47,10 +47,10 @@ export default function SubmitPage() {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-accent/10 text-accent rounded-full mb-6">
               <CheckCircle2 size={48} />
             </div>
-            <h1 className="text-4xl font-bold text-foreground mb-4">
+            <h1 className="text-4xl font-bold text-foreground mb-4 text-center">
               Submission Received!
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-muted-foreground mb-8 text-center">
               Thank you for submitting your brand. We'll review your information and get back to you within 24 hours.
             </p>
 
@@ -83,7 +83,7 @@ export default function SubmitPage() {
       <div className="container max-w-4xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-foreground mb-4">
+          <h1 className="text-5xl font-bold text-foreground mb-4 text-center">
             Submit Your <span className="text-gradient">Brand</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-center">

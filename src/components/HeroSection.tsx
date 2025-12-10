@@ -19,13 +19,13 @@ export default function HeroSection() {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in text-balance">
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 animate-fade-in text-balance text-center">
             Elevate Your Brand with{' '}
             <span className="text-gradient">Stunning Showcases</span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in text-balance leading-relaxed text-center">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in leading-relaxed text-center">
             Transform your brand presence with professional content creation and strategic social media showcasing that drives real results
           </p>
 

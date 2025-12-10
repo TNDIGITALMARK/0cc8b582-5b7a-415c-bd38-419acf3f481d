@@ -20,7 +20,7 @@ export default function HomePage() {
       <section className="section bg-white">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">
               Featured <span className="text-gradient">Showcases</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center">
@@ -47,7 +47,7 @@ export default function HomePage() {
       <section className="section bg-muted">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">
               Why <span className="text-gradient">Choose Us</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center">
@@ -99,7 +99,7 @@ export default function HomePage() {
       <section className="section bg-white">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-center">
               Latest <span className="text-gradient">Insights</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center">
@@ -129,7 +129,7 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center">
               Ready to Showcase Your Brand?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 text-center max-w-2xl mx-auto">
+            <p className="text-xl text-center mb-8 max-w-2xl mx-auto">
               Let's create something amazing together. Submit your brand today and start your journey to exceptional social media presence.
             </p>
             <Link href="/submit" className="btn-primary inline-flex items-center gap-2 text-lg px-8 py-4">

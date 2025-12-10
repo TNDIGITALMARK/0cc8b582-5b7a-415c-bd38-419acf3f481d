@@ -171,7 +171,7 @@ export default function BlogDetailPage({ params }: { params: { slug: string } })
         {/* CTA */}
         <div className="bg-primary text-primary-foreground rounded-lg shadow-lg p-8 text-center">
           <h2 className="text-3xl font-bold mb-4 text-center">Ready to Elevate Your Brand?</h2>
-          <p className="text-lg text-gray-300 mb-6 text-center max-w-2xl mx-auto">
+          <p className="text-lg mb-6 text-center max-w-2xl mx-auto">
             Let's create professional content that showcases your brand's unique story
           </p>
           <Link href="/submit" className="btn-primary inline-flex items-center gap-2">
