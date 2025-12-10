@@ -22,7 +22,7 @@ export default function ShowcasesPage() {
           <h1 className="text-5xl font-bold text-foreground mb-4">
             Brand <span className="text-gradient">Showcases</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-center">
             Explore our portfolio of successful brand showcases and see how we've helped businesses achieve remarkable results through professional content creation
           </p>
         </div>

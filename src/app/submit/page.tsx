@@ -86,7 +86,7 @@ export default function SubmitPage() {
           <h1 className="text-5xl font-bold text-foreground mb-4">
             Submit Your <span className="text-gradient">Brand</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-center">
             Tell us about your brand and how you'd like to be showcased. We'll create stunning content that elevates your presence.
           </p>
         </div>

@@ -314,6 +314,19 @@ p:last-child {
   text-align: center;
 }
 
+/* Ensure constrained-width paragraphs with mx-auto also have centered text */
+p.mx-auto,
+p[class*="max-w-"] {
+  text-align: center;
+}
+
+/* Apply to headings as well for consistency */
+h1.mx-auto, h2.mx-auto, h3.mx-auto, h4.mx-auto, h5.mx-auto, h6.mx-auto,
+h1[class*="max-w-"], h2[class*="max-w-"], h3[class*="max-w-"],
+h4[class*="max-w-"], h5[class*="max-w-"], h6[class*="max-w-"] {
+  text-align: center;
+}
+
 /* Links with sophisticated styling */
 a {
   color: hsl(var(--primary));

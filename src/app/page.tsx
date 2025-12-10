@@ -23,7 +23,7 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Featured <span className="text-gradient">Showcases</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center">
               Explore our latest success stories and see how we've helped brands achieve remarkable results
             </p>
           </div>
@@ -50,7 +50,7 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Why <span className="text-gradient">Choose Us</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center">
               Professional showcasing that elevates your brand and drives measurable growth
             </p>
           </div>
@@ -102,7 +102,7 @@ export default function HomePage() {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Latest <span className="text-gradient">Insights</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-center">
               Stay updated with the latest trends, tips, and strategies in social media marketing
             </p>
           </div>

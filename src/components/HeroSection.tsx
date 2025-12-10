@@ -25,7 +25,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in text-balance leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in text-balance leading-relaxed text-center">
             Transform your brand presence with professional content creation and strategic social media showcasing that drives real results
           </p>
 

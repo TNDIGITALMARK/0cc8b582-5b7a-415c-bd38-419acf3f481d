@@ -145,7 +145,7 @@ export default function ShowcaseDetailPage({ params }: { params: { id: string } 
         {/* CTA */}
         <div className="bg-primary text-primary-foreground rounded-lg shadow-lg p-8 mt-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready for Similar Results?</h2>
-          <p className="text-lg text-gray-300 mb-6">
+          <p className="text-lg text-gray-300 mb-6 text-center">
             Let's create an exceptional showcase for your brand
           </p>
           <Link href="/submit" className="btn-primary inline-flex items-center gap-2">
