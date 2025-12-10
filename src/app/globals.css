@@ -320,44 +320,52 @@ p:last-child {
   text-align: center !important;
 }
 
-/* Specific targeting for paragraphs with mx-auto (most common subtitle pattern) */
-p.mx-auto,
-p[class*="mx-auto"] {
+/* CRITICAL: Override the inherit value for paragraphs that need centering */
+/* Paragraphs with mx-auto should ALWAYS be centered */
+p.mx-auto {
   text-align: center !important;
 }
 
-/* Target paragraphs with max-width constraints */
+/* More specific targeting with multiple centering indicators */
+p.text-center,
+p.text-center.mx-auto,
+p[class*="mx-auto"][class*="text-center"] {
+  text-align: center !important;
+}
+
+/* Target paragraphs with max-width constraints - common pattern for centered subtitles */
+p.max-w-2xl,
+p.max-w-3xl,
+p.max-w-4xl,
+p.max-w-xl,
+p.max-w-lg,
 p[class*="max-w-"] {
   text-align: center !important;
 }
 
 /* Headings with centering patterns */
-h1.mx-auto, h2.mx-auto, h3.mx-auto, h4.mx-auto, h5.mx-auto, h6.mx-auto,
-h1[class*="mx-auto"], h2[class*="mx-auto"], h3[class*="mx-auto"],
-h4[class*="mx-auto"], h5[class*="mx-auto"], h6[class*="mx-auto"] {
+h1.mx-auto, h2.mx-auto, h3.mx-auto, h4.mx-auto, h5.mx-auto, h6.mx-auto {
   text-align: center !important;
 }
 
 /* Ensure muted text (common for subtitles) is centered when constrained */
 .text-muted-foreground.mx-auto,
-.text-muted-foreground[class*="mx-auto"],
+.text-muted-foreground.max-w-2xl,
+.text-muted-foreground.max-w-3xl,
 .text-muted-foreground[class*="max-w-"] {
   text-align: center !important;
 }
 
 /* Target all text sizes commonly used for subtitles */
 .text-xl.mx-auto,
-.text-xl[class*="mx-auto"],
 .text-lg.mx-auto,
-.text-lg[class*="mx-auto"],
 .text-2xl.mx-auto,
-.text-2xl[class*="mx-auto"] {
-  text-align: center !important;
-}
-
-/* Ensure gray text colors (often used for subtitles) are centered */
-[class*="text-gray-"].mx-auto,
-[class*="text-gray-"][class*="mx-auto"] {
+.text-xl.max-w-2xl,
+.text-lg.max-w-2xl,
+.text-2xl.max-w-2xl,
+.text-xl.max-w-3xl,
+.text-lg.max-w-3xl,
+.text-2xl.max-w-3xl {
   text-align: center !important;
 }
 
@@ -641,17 +649,28 @@ button:focus-visible {
    Extra specificity for edge cases
    ============================================ */
 
-/* Section-specific subtitle targeting */
-section p[class*="text-xl"],
-section p[class*="text-lg"],
-section p[class*="text-2xl"] {
+/* Section-specific subtitle targeting - target ALL subtitle-like paragraphs in sections */
+section p.text-xl,
+section p.text-lg,
+section p.text-2xl,
+section p.text-muted-foreground,
+section .text-muted-foreground {
   text-align: center !important;
 }
 
-/* Container-specific subtitle targeting */
-.container p[class*="text-xl"].mx-auto,
-.container p[class*="text-lg"].mx-auto,
-.container p[class*="text-2xl"].mx-auto {
+/* Container-specific subtitle targeting - highest specificity */
+.container p.mx-auto,
+.container p.text-center,
+.container p.max-w-2xl,
+.container p.max-w-3xl,
+.container .text-center p {
+  text-align: center !important;
+}
+
+/* Combination patterns that commonly appear in the codebase */
+.text-center.mb-12 p,
+.text-center > p,
+div[class*="text-center"] p {
   text-align: center !important;
 }
 
